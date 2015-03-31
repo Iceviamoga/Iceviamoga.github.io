@@ -11,6 +11,7 @@ var Game = {
 		this.c.width = this.c.width;
 		this.c.height = this.c.height;
 		this.ctx = this.c.getContext("2d");
+
 		this.color = "rgba(20,20,20,.7)";
 		this.bullets = [];
 		this.enemyBullets = [];
@@ -345,7 +346,7 @@ Enemy.prototype.update = function(){
 Enemy.prototype.die = function(){
   this.explode();
   delete Game.enemies[this.index];
-  Game.score += 15;
+  Game.score += 9999999999;
   Game.enemiesAlive = Game.enemiesAlive > 1 ? Game.enemiesAlive - 1 : 0;
   if(Game.enemiesAlive < Game.maxEnemies){
   	Game.enemiesAlive++;
